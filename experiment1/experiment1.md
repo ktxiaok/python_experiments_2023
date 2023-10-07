@@ -6,7 +6,7 @@
 
 姓名： 康佳程
 
-Github地址：<https://github.com/yourusername/python_course>
+Github地址：<https://github.com/ktxiaok/python_experiments_2023.git>
 
 ---
 
@@ -163,17 +163,74 @@ def add_binary(a,b):
 
 **注意：不要使用截图，Markdown文档转换为Pdf格式后，截图可能会无法显示。**
 
+git课程完成截图：
+![git课程完成截图](images/1.jpg)
+
 ## 实验考查
 
 请使用自己的语言回答下面的问题，这些问题将在实验检查时用于提问和答辩，并要求进行实际的操作。
 
 1. 什么是版本控制？使用Git作为版本控制软件有什么优点？
+
+版本控制是软件工程中的一个术语，主要是用来追踪文件的变更。
+
+git的优点有：分布式开发、灵活高效、可以离线工作、分支管理等等。
+
 2. 如何使用Git撤销还没有Commit的修改？如何使用Git检出（Checkout）已经以前的Commit？（实际操作）
+
+撤销还没有commit的修改：
+
+如果没有git add，则使用命令git checkout 文件名，否则使用命令git reset HEAD 文件名; git checkout 文件名
+
+检出以前的commit：
+
+使用命令git checkout commit哈希值/相对引用。
+
+相对引用的语法为"分支名/HEAD~x"，表示对应向前移动x步。
+
 3. Git中的HEAD是什么？如何让HEAD处于detached HEAD状态？（实际操作）
+
+HEAD是当前分支引用的指针，指向某个commit，是下一次commit的父节点。
+
+使用git checkout切换到某个不属于任何一个分支的commit可以让HEAD处于分离状态。
+
 4. 什么是分支（Branch）？如何创建分支？如何切换分支？（实际操作）
+
+分支本质上是一个指向某个commit的指针，可以让开发从主线中分离出来进行独立的操作。
+
+创建分支：git branch 分支名
+
+切换分支：git checkout 分支名
+
 5. 如何合并分支？git merge和git rebase的区别在哪里？（实际操作）
+
+合并分支：首先使用git checkout切换到目标分支，然后使用git merge 分支名来合并分支。
+
+git merge是将两个分支的所有祖先合并成一个新的commit，git rebase是将一个分支独有的commit线性地追加在另一个分支上。
+
 6. 如何在Markdown格式的文本中使用标题、数字列表、无序列表和超链接？（实际操作）
+
+```markdown
+# 一级标题
+## 二级标题
+### 三级标题
+
+数字列表：
+1. 
+2. 
+3. 
+
+无序列表：
+- xxx
+- yyy
+- zzz
+
+超链接：
+[link_name](link)
+```
 
 ## 实验总结
 
 总结一下这次实验你学习和使用到的知识，例如：编程工具的使用、数据结构、程序语言的语法、算法、编程技巧、编程思想。
+
+本次实验学习了git和markdown的使用，学习了版本控制的思想。
